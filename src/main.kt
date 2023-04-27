@@ -52,11 +52,26 @@ fun main() {
     }
     println()
 
+    val maria = Analista(
+        nome = "Maria",
+        cpf = "444.444.444-44",
+        salario = 3000.0
+    )
+
+    println("Dados do Analista:")
+    println("Nome: ${maria.nome}")
+    println("CPF: ${maria.cpf}")
+    println("Salário: ${maria.salario}")
+    println("Bonificação: ${maria.bonificacao()}")
+    
+    println()
+
     val calculadora = CalculadoraBonificacao()
 
     calculadora.registra(murilo)
     calculadora.registra(fran)
     calculadora.registra(gui)
+    calculadora.registra(maria)
 
     println("Valor total em bonificações: ${calculadora.total} ")
 }
