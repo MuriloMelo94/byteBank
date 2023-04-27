@@ -1,77 +1,52 @@
 fun main() {
-    val murilo = Funcionario(
-        nome = "Murilo",
-        cpf = "123.456.789-10",
-        salario = 1000.0
+
+    val contaCorrente = ContaCorrente(
+        titular = "Antonio",
+        numero = 2100
     )
 
     println()
-    println("Dados do Funcionário")
-    println("Nome: ${murilo.nome}")
-    println("CPF: ${murilo.cpf}")
-    println("Salário: ${murilo.salario}")
-    println("Bonificação: ${murilo.bonificacao()}")
+    println("Conta Corrente do: ${contaCorrente.titular}")
+    println("Numero da conta: ${contaCorrente.numero}")
+    println("Sando inicial: ${contaCorrente.saldo}")
     println()
 
-    val fran = Gerente(
-        nome = "Fran",
-        cpf = "222.222.222-22",
-        salario = 2000.0,
-        senha = 1234
+    val contaPoupanca = ContaPoupanca(
+        titular = "Ana",
+        numero = 3232
     )
 
-    println("Dados do Gerente")
-    println("Nome: ${fran.nome}")
-    println("CPF: ${fran.cpf}")
-    println("Salário: ${fran.salario}")
-    println("Bonificação: ${fran.bonificacao()}")
-    if (fran.autentica(1234)) {
-        println("Autenticado com sucesso")
-    } else {
-        println("Falha na autenticação")
-    }
+    println()
+    println("Conta Poupança da: ${contaPoupanca.titular}")
+    println("Numero da conta Poupança: ${contaPoupanca.numero}")
+    println("Sando inicial Poupança: ${contaPoupanca.saldo}")
     println()
 
-    val gui = Diretor(
-        nome = "Guilherme",
-        cpf = "333.333.333.33",
-        salario = 4000.0,
-        senha = 4000,
-        plr = 400.0
-    )
-
-    println("Dados do Diretor")
-    println("Nome: ${gui.nome}")
-    println("CPF: ${gui.cpf}")
-    println("Salário: ${gui.salario}")
-    println("Bonificação: ${gui.bonificacao()}")
-    if (gui.autentica(4000)) {
-        println("Autenticado com sucesso")
-    } else {
-        println("Falha na autenticação")
-    }
+    println(" ----- realizando Depósitos ----- ")
+    Thread.sleep(3000L)
+    contaCorrente.deposita(1000.0)
+    contaPoupanca.deposita(1000.0)
     println()
 
-    val maria = Analista(
-        nome = "Maria",
-        cpf = "444.444.444-44",
-        salario = 3000.0
-    )
-
-    println("Dados do Analista:")
-    println("Nome: ${maria.nome}")
-    println("CPF: ${maria.cpf}")
-    println("Salário: ${maria.salario}")
-    println("Bonificação: ${maria.bonificacao()}")
-    
+    println("Saldo atual Conta Corrente: ${contaCorrente.saldo}")
+    println("Saldo atual Conta Poupança: ${contaPoupanca.saldo}")
     println()
 
-    val calculadora = CalculadoraBonificacao()
+    println(" ----- realizando Saques ----- ")
+    Thread.sleep(3000L)
+    contaCorrente.saca(100.0)
+    contaPoupanca.saca(100.0)
+    println()
 
-    calculadora.registra(murilo)
-    calculadora.registra(fran)
-    calculadora.registra(gui)
-    calculadora.registra(maria)
+    println("Saldo atual pós SAQUE Conta Corrente: ${contaCorrente.saldo}")
+    println("Saldo atual pós SAQUE Conta Poupança: ${contaPoupanca.saldo}")
+    println()
 
-    println("Valor total em bonificações: ${calculadora.total} ")
+    println(" ----- realizando Transferência Corrente > Poupança ----- ")
+    Thread.sleep(3000L)
+    contaCorrente.transfere(100.0, contaPoupanca)
+    println("Saldo atual pós TRANSFERÊNCIA Conta Corrente: ${contaCorrente.saldo}")
+    println("Saldo atual pós TRANSFERÊNCIA Conta Poupança: ${contaPoupanca.saldo}")
+    println()
 }
+
