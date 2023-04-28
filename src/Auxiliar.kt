@@ -1,4 +1,4 @@
-class Analista (
+class Auxiliar (
     nome: String,
     cpf: String,
     salario: Double
@@ -7,7 +7,7 @@ class Analista (
     cpf = cpf,
     salario = salario
 ) {
-    override fun bonificacao(): Double{
-        return salario * 0.1
+    override fun bonificacao(): Double {
+        return salario * 0.05
     }
 }
