@@ -26,7 +26,7 @@ private fun testaFuncionarioAdmin() {
     )
 
     val sistema = SistemaInterno()
-    sistema.entra(gerente, 1000)
-    sistema.entra(diretor, 2000)
-    sistema.entra(cliente, 1234)
+    sistema.entra(gerente, 2000)
+    sistema.entra(diretor, 1000)
+    sistema.entra(cliente, 4321)
 }

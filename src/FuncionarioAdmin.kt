@@ -2,7 +2,7 @@ abstract class FuncionarioAdmin(
     nome: String,
     cpf: String,
     salario: Double,
-    val senha: Int
+    private val senha: Int
 ) : Funcionario(
     nome = nome,
     cpf = cpf,
