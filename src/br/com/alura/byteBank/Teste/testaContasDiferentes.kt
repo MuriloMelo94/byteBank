@@ -1,22 +1,33 @@
+package br.com.alura.byteBank.Teste
+
+import br.com.alura.byteBank.Modelo.Cliente
+import br.com.alura.byteBank.Modelo.ContaCorrente
+import br.com.alura.byteBank.Modelo.ContaPoupanca
+
 fun testaContasDiferentes() {
-    val contaCorrente = ContaCorrente(
-        titular = "Antonio",
-        numero = 2100
+    val contaCorrente = ContaCorrente(Cliente(
+            nome = "Antonio",
+            cpf = "333.333.333-33",
+            senha = 3333
+        ),  numero = 2100
     )
 
     println()
-    println("Conta Corrente do: ${contaCorrente.titular}")
+    println("Conta Corrente do: ${contaCorrente.titular.nome}")
     println("Numero da conta: ${contaCorrente.numero}")
     println("Sando inicial: ${contaCorrente.saldo}")
     println()
 
-    val contaPoupanca = ContaPoupanca(
-        titular = "Ana",
+    val contaPoupanca = ContaPoupanca(Cliente(
+        nome = "Ana",
+        cpf = "444.444.444-44",
+        senha = 4444
+    ),
         numero = 3232
     )
 
     println()
-    println("Conta Poupança da: ${contaPoupanca.titular}")
+    println("Conta Poupança da: ${contaPoupanca.titular.nome}")
     println("Numero da conta Poupança: ${contaPoupanca.numero}")
     println("Sando inicial Poupança: ${contaPoupanca.saldo}")
     println()

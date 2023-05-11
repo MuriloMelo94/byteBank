@@ -1,9 +1,11 @@
-fun main() {
+package br.com.alura.byteBank.Teste
 
-    testaFuncionarioAdmin()
-}
+import br.com.alura.byteBank.Modelo.Cliente
+import br.com.alura.byteBank.Modelo.Diretor
+import br.com.alura.byteBank.Modelo.Gerente
+import br.com.alura.byteBank.Modelo.SistemaInterno
 
-private fun testaFuncionarioAdmin() {
+fun testaFuncionarioAdmin() {
     val gerente = Gerente(
         nome = "Murilo",
         cpf = "111.111.111-11",
@@ -26,7 +28,7 @@ private fun testaFuncionarioAdmin() {
     )
 
     val sistema = SistemaInterno()
-    sistema.entra(gerente, 2000)
-    sistema.entra(diretor, 1000)
-    sistema.entra(cliente, 4321)
+    sistema.entra(gerente, 1000)
+    sistema.entra(diretor, 2000)
+    sistema.entra(cliente, 1234)
 }

@@ -1,3 +1,5 @@
+package br.com.alura.byteBank.Teste
+
 fun testaLacos() {
     for (i in 5 downTo 1 step 2) {
         println("Bem vindo ao Bytebank")

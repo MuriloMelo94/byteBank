@@ -1,3 +1,10 @@
+package br.com.alura.byteBank.Teste
+
+import br.com.alura.byteBank.Modelo.Analista
+import br.com.alura.byteBank.Modelo.CalculadoraBonificacao
+import br.com.alura.byteBank.Modelo.Diretor
+import br.com.alura.byteBank.Modelo.Gerente
+
 fun testaFuncionarios() {
     val murilo = Analista(
         nome = "Murilo",
@@ -20,7 +27,7 @@ fun testaFuncionarios() {
         senha = 1234
     )
 
-    println("Dados do Gerente")
+    println("Dados do br.com.alura.byteBank.Modelo.Gerente")
     println("Nome: ${fran.nome}")
     println("CPF: ${fran.cpf}")
     println("Salário: ${fran.salario}")
@@ -40,7 +47,7 @@ fun testaFuncionarios() {
         plr = 400.0
     )
 
-    println("Dados do Diretor")
+    println("Dados do br.com.alura.byteBank.Modelo.Diretor")
     println("Nome: ${gui.nome}")
     println("CPF: ${gui.cpf}")
     println("Salário: ${gui.salario}")
@@ -58,7 +65,7 @@ fun testaFuncionarios() {
         salario = 3000.0
     )
 
-    println("Dados do Analista:")
+    println("Dados do br.com.alura.byteBank.Modelo.Analista:")
     println("Nome: ${maria.nome}")
     println("CPF: ${maria.cpf}")
     println("Salário: ${maria.salario}")

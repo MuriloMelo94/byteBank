@@ -1,5 +1,7 @@
+package br.com.alura.byteBank.Modelo
+
 class ContaPoupanca(
-    titular: String,
+    titular: Cliente,
     numero: Int
 ) : Conta(
     titular = titular,

@@ -1,3 +1,5 @@
+package br.com.alura.byteBank.Teste
+
 fun testaCondicoes(saldo: Double) {
     if (saldo > 0.0) {
         println("A conta está positiva")

@@ -1,8 +1,11 @@
-class Gerente (
+package br.com.alura.byteBank.Modelo
+
+class Diretor(
     nome: String,
     cpf: String,
     salario: Double,
-    senha: Int
+    senha: Int,
+    val plr: Double
 ) : FuncionarioAdmin(
     nome = nome,
     cpf = cpf,
@@ -10,6 +13,6 @@ class Gerente (
     senha = senha
 ){
     override fun bonificacao(): Double{
-        return salario
+        return salario + plr
     }
 }

@@ -1,3 +1,5 @@
+package br.com.alura.byteBank.Modelo
+
 class SistemaInterno {
 
     fun entra(usuario: Autenticavel, senha: Int){

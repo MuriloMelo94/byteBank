@@ -1,3 +1,5 @@
+package br.com.alura.byteBank.Modelo
+
 abstract class Funcionario(
     val nome: String,
     val cpf: String,
